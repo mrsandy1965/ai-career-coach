@@ -142,3 +142,33 @@
   height: 100%;
   background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.9));
   }
+
+  .gradient {
+    background: linear-gradient(to bottom, #9ca3af, #e5e7eb, #4b5563); /* from-gray-400 via-gray-200 to-gray-600 */
+  }
+  
+  /* Gradient text utility */
+  .gradient-title {
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    background: linear-gradient(to bottom, #9ca3af, #e5e7eb, #4b5563);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+
+  .hero-image-wrapper {
+    perspective: 1000px;
+  }
+  .hero-image{
+    transform: rotateX(15deg) scale(1);
+    transition: transform 0.5s ease-out;
+    will-change: transform;
+  }
+  .hero-image.scrolled{
+    transform: rotateX(0deg) scale(1) translateY(40px);
+  }
